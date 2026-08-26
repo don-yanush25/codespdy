@@ -26,39 +26,12 @@ export default function Hero({ onGetStarted, onViewWork }) {
         {/* Editorial Left-Aligned Composition Above Showcase */}
         <div style={{ maxWidth: '880px', margin: '0 auto 3rem auto', textAlign: 'left' }}>
           
-          {/* 1. Live Sprint Availability Pill */}
-          <div
-            className="animate-fade-in stagger-1"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.6rem',
-              padding: '0.4rem 1rem',
-              borderRadius: 'var(--radius-pill)',
-              background: '#ffffff',
-              border: '1px solid var(--border-color)',
-              fontSize: '0.78rem',
-              fontWeight: 700,
-              color: 'var(--text-main)',
-              marginBottom: '1.25rem',
-              boxShadow: 'var(--shadow-subtle)',
-            }}
-          >
-            <span
-              style={{
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                background: '#10b981',
-                boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.25)',
-                display: 'inline-block',
-                animation: 'pulseGreen 2s infinite',
-              }}
-            />
-            <span>Accepting New Clients — 2 Sprint Slots Open</span>
+          {/* Subtle Eyebrow Label */}
+          <div className="hero-eyebrow animate-fade-in stagger-1" style={{ marginBottom: '1.25rem' }}>
+            CODESPDY STUDIO — WEB ENGINEERING
           </div>
 
-          {/* 2. Large Editorial Display Headline with Gradient Accent */}
+          {/* Large Editorial Display Headline with Gradient Accent */}
           <h1
             className="animate-fade-in stagger-2"
             style={{
