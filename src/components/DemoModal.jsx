@@ -32,30 +32,35 @@ export default function DemoModal({ project, onClose, onOrderSimilar }) {
     >
       {/* Top Toolbar */}
       <div
+        className="modal-top-toolbar"
         style={{
-          height: '60px',
           background: '#ffffff',
           borderBottom: '1px solid var(--border-color)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '0 1.5rem',
-          gap: '1rem',
+          padding: '0.75rem 1rem',
+          gap: '0.75rem',
           boxShadow: 'var(--shadow-subtle)',
+          flexWrap: 'wrap',
         }}
       >
         {/* Project Title */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-          <span style={{ fontWeight: 800, fontSize: '1.05rem', color: 'var(--text-main)' }}>{project.title}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0, flexShrink: 1 }}>
+          <span style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--text-main)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {project.title}
+          </span>
           <span
+            className="modal-badge-desktop"
             style={{
-              fontSize: '0.72rem',
-              padding: '0.15rem 0.6rem',
+              fontSize: '0.7rem',
+              padding: '0.15rem 0.5rem',
               borderRadius: 'var(--radius-pill)',
               background: 'rgba(2, 132, 199, 0.08)',
               color: 'var(--accent-cyan-dark)',
               border: '1px solid rgba(2, 132, 199, 0.2)',
               fontWeight: 700,
+              whiteSpace: 'nowrap',
             }}
           >
             {project.badge}
@@ -75,79 +80,87 @@ export default function DemoModal({ project, onClose, onOrderSimilar }) {
         >
           <button
             onClick={() => setDeviceView('desktop')}
+            title="Desktop Viewport"
             style={{
-              padding: '0.35rem 0.75rem',
+              padding: '0.35rem 0.65rem',
               borderRadius: 'var(--radius-pill)',
               background: deviceView === 'desktop' ? 'var(--text-main)' : 'transparent',
               color: deviceView === 'desktop' ? '#ffffff' : 'var(--text-muted)',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.35rem',
-              fontSize: '0.8rem',
+              gap: '0.3rem',
+              fontSize: '0.78rem',
               fontWeight: 700,
               transition: 'all var(--transition-fast)',
             }}
           >
-            <Monitor size={15} /> Desktop
+            <Monitor size={14} /> <span className="device-label">Desktop</span>
           </button>
 
           <button
             onClick={() => setDeviceView('tablet')}
+            title="Tablet Viewport"
             style={{
-              padding: '0.35rem 0.75rem',
+              padding: '0.35rem 0.65rem',
               borderRadius: 'var(--radius-pill)',
               background: deviceView === 'tablet' ? 'var(--text-main)' : 'transparent',
               color: deviceView === 'tablet' ? '#ffffff' : 'var(--text-muted)',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.35rem',
-              fontSize: '0.8rem',
+              gap: '0.3rem',
+              fontSize: '0.78rem',
               fontWeight: 700,
               transition: 'all var(--transition-fast)',
             }}
           >
-            <Tablet size={15} /> Tablet
+            <Tablet size={14} /> <span className="device-label">Tablet</span>
           </button>
 
           <button
             onClick={() => setDeviceView('mobile')}
+            title="Mobile Viewport"
             style={{
-              padding: '0.35rem 0.75rem',
+              padding: '0.35rem 0.65rem',
               borderRadius: 'var(--radius-pill)',
               background: deviceView === 'mobile' ? 'var(--text-main)' : 'transparent',
               color: deviceView === 'mobile' ? '#ffffff' : 'var(--text-muted)',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.35rem',
-              fontSize: '0.8rem',
+              gap: '0.3rem',
+              fontSize: '0.78rem',
               fontWeight: 700,
               transition: 'all var(--transition-fast)',
             }}
           >
-            <Smartphone size={15} /> Mobile
+            <Smartphone size={14} /> <span className="device-label">Mobile</span>
           </button>
         </div>
 
         {/* CTA & Close */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <a
             href="#contact"
             onClick={() => {
               onOrderSimilar(project.title);
               onClose();
             }}
-            className="btn btn-primary btn-sm"
+            className="btn btn-primary btn-sm modal-cta-desktop"
+            style={{ padding: '0.45rem 1rem', fontSize: '0.82rem' }}
           >
-            Build Site Like This <ArrowRight size={14} className="btn-arrow" />
+            Build Site Like This <ArrowRight size={13} className="btn-arrow" />
           </a>
           <button
             onClick={onClose}
+            aria-label="Close modal"
             style={{
-              padding: '0.4rem',
-              color: 'var(--text-muted)',
+              padding: '0.45rem',
+              color: 'var(--text-main)',
               borderRadius: 'var(--radius-pill)',
               background: 'var(--bg-subtle)',
               border: '1px solid var(--border-color)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             <X size={18} />
@@ -214,7 +227,7 @@ export default function DemoModal({ project, onClose, onOrderSimilar }) {
                 {project.fullDesc}
               </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
                 <div>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>Industry</span>
                   <p style={{ fontWeight: 700, color: 'var(--text-main)' }}>{project.category}</p>
@@ -228,10 +241,47 @@ export default function DemoModal({ project, onClose, onOrderSimilar }) {
                   <p style={{ fontWeight: 700, color: 'var(--accent-cyan-dark)' }}>{project.lighthouseScore} Speed</p>
                 </div>
               </div>
+
+              {/* Mobile Full-Width CTA */}
+              <div className="modal-cta-mobile" style={{ marginTop: '1.25rem' }}>
+                <a
+                  href="#contact"
+                  onClick={() => {
+                    onOrderSimilar(project.title);
+                    onClose();
+                  }}
+                  className="btn btn-primary btn-lg"
+                  style={{ width: '100%', justifyContent: 'center' }}
+                >
+                  Build Site Like {project.title} <ArrowRight size={16} className="btn-arrow" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 800px) {
+          .modal-badge-desktop {
+            display: none !important;
+          }
+          .modal-cta-desktop {
+            display: none !important;
+          }
+          .device-label {
+            display: none !important;
+          }
+          .modal-cta-mobile {
+            display: block !important;
+          }
+        }
+        @media (min-width: 801px) {
+          .modal-cta-mobile {
+            display: none !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
