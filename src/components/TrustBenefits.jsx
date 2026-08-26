@@ -59,28 +59,47 @@ export default function TrustBenefits() {
               key={index}
               className={`glass-card reveal-on-scroll stagger-${(index % 4) + 1}`}
               style={{
-                padding: '1.5rem 1.25rem',
+                padding: '1.75rem 1.5rem',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '1rem',
+                position: 'relative',
+                background: '#ffffff',
+                border: '1px solid var(--border-color)',
+                borderRadius: '16px',
+                boxShadow: 'var(--shadow-subtle)',
+                transition: 'all 0.3s var(--ease-premium)',
               }}
             >
-              <div
-                style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: 'var(--radius-sm)',
-                  background: 'rgba(2, 132, 199, 0.06)',
-                  border: '1px solid rgba(2, 132, 199, 0.15)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                {b.icon}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div
+                  style={{
+                    width: '46px',
+                    height: '46px',
+                    borderRadius: '12px',
+                    background: 'rgba(2, 132, 199, 0.08)',
+                    border: '1px solid rgba(2, 132, 199, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {b.icon}
+                </div>
+                <span
+                  style={{
+                    fontSize: '1.15rem',
+                    fontWeight: 800,
+                    color: 'var(--text-dim)',
+                    fontFamily: 'var(--font-heading)',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  0{index + 1}
+                </span>
               </div>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>{b.title}</h3>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', lineHeight: 1.55 }}>{b.desc}</p>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>{b.title}</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>{b.desc}</p>
             </div>
           ))}
         </div>

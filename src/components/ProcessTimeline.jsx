@@ -134,9 +134,10 @@ export default function ProcessTimeline({ onGetStarted }) {
             borderRadius: '20px',
             border: '1px solid var(--border-color)',
             overflow: 'hidden',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+            boxShadow: '0 20px 40px -15px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.02)',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            position: 'relative',
           }}
         >
           {steps.map((step, index) => {
@@ -149,7 +150,7 @@ export default function ProcessTimeline({ onGetStarted }) {
                 className="process-grid-card"
                 onMouseEnter={() => setHoveredIndex(index)}
                 style={{
-                  padding: '2rem 1.75rem',
+                  padding: '2.25rem 1.85rem',
                   borderRight: isLast ? 'none' : '1px solid var(--border-color)',
                   borderBottom: 'none',
                   background: isHovered ? '#FAFAF8' : '#ffffff',
@@ -157,8 +158,8 @@ export default function ProcessTimeline({ onGetStarted }) {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   position: 'relative',
-                  cursor: 'default',
-                  transition: 'background 0.3s var(--ease-premium)',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s var(--ease-premium)',
                 }}
               >
                 {/* Top Active Accent Line */}
@@ -168,9 +169,10 @@ export default function ProcessTimeline({ onGetStarted }) {
                     top: 0,
                     left: 0,
                     right: 0,
-                    height: '3px',
-                    background: isHovered ? '#000000' : 'transparent',
-                    transition: 'background 0.3s ease',
+                    height: '4px',
+                    background: isHovered ? 'linear-gradient(90deg, #0284c7, #00f2fe)' : 'transparent',
+                    boxShadow: isHovered ? '0 2px 10px rgba(0, 242, 254, 0.4)' : 'none',
+                    transition: 'all 0.3s ease',
                   }}
                 />
 
