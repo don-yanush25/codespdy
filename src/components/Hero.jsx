@@ -144,7 +144,7 @@ export default function Hero({ onGetStarted, onViewWork }) {
             <img
               src="/assets/hero_mockup.jpg"
               alt="codeSPDY — Custom Business Website Engineering Showcase"
-              fetchpriority="high"
+              fetchPriority="high"
               decoding="async"
               style={{
                 width: '100%',

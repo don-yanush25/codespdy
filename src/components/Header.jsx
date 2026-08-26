@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import CodeSpdyLogo from './CodeSpdyLogo';
 
 export default function Header({ onSelectPackage }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,17 +50,17 @@ export default function Header({ onSelectPackage }) {
         style={{
           width: '100%',
           maxWidth: '1080px',
-          background: isScrolled ? 'rgba(255, 255, 255, 0.94)' : 'rgba(245, 244, 239, 0.88)',
+          background: '#ffffff',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
-          border: '1px solid var(--border-color)',
+          border: '1px solid rgba(0, 0, 0, 0.08)',
           borderRadius: 'var(--radius-pill)',
-          padding: '0.6rem 1.25rem',
+          padding: '0.42rem 1.15rem',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           transition: 'all 0.3s var(--ease-premium)',
-          boxShadow: isScrolled ? '0 8px 24px -6px rgba(0,0,0,0.04)' : 'none',
+          boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.06)',
           pointerEvents: 'auto',
         }}
       >
@@ -68,55 +69,9 @@ export default function Header({ onSelectPackage }) {
           href="#home"
           aria-label="codeSPDY — Back to Home"
           onClick={(e) => handleNavClick(e, '#home')}
-          style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', textDecoration: 'none' }}
+          style={{ textDecoration: 'none' }}
         >
-          <div
-            style={{
-              width: '36px',
-              height: '36px',
-              borderRadius: '10px',
-              overflow: 'hidden',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              border: '1.5px solid var(--border-color)',
-              background: '#ffffff',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-              flexShrink: 0,
-            }}
-          >
-            <img src="/assets/codespdy_logo.jpeg" alt="codeSPDY Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-            <span
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: '1.35rem',
-                fontWeight: 900,
-                color: 'var(--text-main)',
-                letterSpacing: '-0.035em',
-                lineHeight: 1,
-              }}
-            >
-              code<span style={{ color: '#0284c7' }}>SPDY</span>
-            </span>
-            <span
-              style={{
-                fontSize: '0.6rem',
-                fontWeight: 800,
-                letterSpacing: '0.08em',
-                background: 'rgba(0,0,0,0.05)',
-                color: 'var(--text-muted)',
-                border: '1px solid var(--border-color)',
-                padding: '0.15rem 0.45rem',
-                borderRadius: 'var(--radius-pill)',
-                textTransform: 'uppercase',
-                lineHeight: 1,
-              }}
-            >
-              STUDIO
-            </span>
-          </div>
+          <CodeSpdyLogo size="default" showBadge={true} />
         </a>
 
         {/* Desktop Navigation Links */}
