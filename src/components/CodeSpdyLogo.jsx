@@ -62,7 +62,7 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true }) {
             code
           </span>
 
-          {/* "SPDY" in slanted dynamic teal-blue gradient */}
+          {/* "SPDY" in slanted dynamic teal-blue gradient with clip overhang padding */}
           <span
             style={{
               fontFamily: "'Outfit', 'Plus Jakarta Sans', sans-serif",
@@ -70,8 +70,12 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true }) {
               fontWeight: 900,
               fontStyle: 'italic',
               letterSpacing: '-0.02em',
-              lineHeight: 1,
+              lineHeight: 1.1,
               marginLeft: '1px',
+              paddingRight: '6px',
+              paddingLeft: '1px',
+              paddingTop: '2px',
+              paddingBottom: '2px',
               background: 'linear-gradient(120deg, #0284C7 0%, #00BFA5 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
