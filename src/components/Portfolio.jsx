@@ -196,7 +196,7 @@ export default function Portfolio({ onOrderProject }) {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '0.85rem' }} onClick={(e) => e.stopPropagation()}>
+                <div className="portfolio-card-actions" style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }} onClick={(e) => e.stopPropagation()}>
                   <button
                     type="button"
                     onClick={() => setActiveDemoProject(project)}
@@ -224,6 +224,20 @@ export default function Portfolio({ onOrderProject }) {
         onClose={() => setActiveDemoProject(null)}
         onOrderSimilar={onOrderProject}
       />
+
+      <style>{`
+        @media (max-width: 650px) {
+          .portfolio-card-actions {
+            flex-direction: column !important;
+            width: 100% !important;
+          }
+          .portfolio-card-actions button,
+          .portfolio-card-actions a {
+            width: 100% !important;
+            justify-content: center !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
