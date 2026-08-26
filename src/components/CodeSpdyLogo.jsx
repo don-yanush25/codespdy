@@ -12,99 +12,100 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true, theme
         gap: '0.65rem',
         textDecoration: 'none',
         userSelect: 'none',
+        transition: 'transform 0.2s ease',
       }}
       className="codespdy-brand-mark"
+      onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+      onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
     >
-      {/* Precision Geometric Emblem */}
+      {/* 10/10 Iconic Speed-Code Geometric Emblem */}
       <div
         style={{
           width: `${iconSize}px`,
           height: `${iconSize}px`,
           borderRadius: '10px',
-          background: '#0a0a0a',
-          border: '1.5px solid #262626',
-          boxShadow: '0 3px 10px rgba(0, 0, 0, 0.12)',
+          background: '#000000',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexShrink: 0,
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
           position: 'relative',
-          overflow: 'hidden',
         }}
       >
         <svg
-          width={isSmall ? '18' : '22'}
-          height={isSmall ? '18' : '22'}
+          width={isSmall ? '18' : '20'}
+          height={isSmall ? '18' : '20'}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Left Bracket */}
+          {/* Lightning / Speed Code Bracket Symbol */}
           <path
-            d="M8 7L3.5 12L8 17"
+            d="M13 2.5L4 13.5H12L11 21.5L20 10.5H12L13 2.5Z"
+            fill="#ffffff"
             stroke="#ffffff"
-            strokeWidth="2.5"
-            strokeLinecap="round"
+            strokeWidth="0.5"
             strokeLinejoin="round"
-          />
-          {/* Right Bracket */}
-          <path
-            d="M16 7L20.5 12L16 17"
-            stroke="#ffffff"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          {/* Center Speed Slash */}
-          <path
-            d="M13.5 5L10.5 19"
-            stroke="rgba(255, 255, 255, 0.45)"
-            strokeWidth="2.2"
-            strokeLinecap="round"
           />
         </svg>
       </div>
 
-      {/* ITC Kabel Style Geometric Brand Typography */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+      {/* 10/10 Typographic Brand Lockup */}
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.2rem' }}>
         <span
           style={{
-            fontFamily: "'Syne', 'Outfit', sans-serif",
-            fontSize: isSmall ? '1.3rem' : '1.5rem',
-            fontWeight: 800,
+            fontFamily: "'Syne', 'Plus Jakarta Sans', sans-serif",
+            fontSize: isSmall ? '1.28rem' : '1.45rem',
+            fontWeight: 500,
             letterSpacing: '-0.03em',
+            color: '#000000',
             lineHeight: 1,
-            color: '#0a0a0a',
-            textTransform: 'none',
           }}
         >
           code
+        </span>
+        <span
+          style={{
+            fontFamily: "'Syne', 'Plus Jakarta Sans', sans-serif",
+            fontSize: isSmall ? '1.28rem' : '1.45rem',
+            fontWeight: 900,
+            letterSpacing: '-0.01em',
+            color: '#000000',
+            lineHeight: 1,
+            display: 'inline-flex',
+            alignItems: 'baseline',
+          }}
+        >
+          SPDY
           <span
             style={{
-              color: '#0a0a0a',
-              fontWeight: 900,
-              letterSpacing: '-0.015em',
+              width: '4px',
+              height: '4px',
+              borderRadius: '50%',
+              background: '#000000',
+              marginLeft: '2px',
+              display: 'inline-block',
             }}
-          >
-            SPDY
-          </span>
+          />
         </span>
 
         {showBadge && (
           <span
             style={{
-              fontFamily: "'Syne', 'Outfit', sans-serif",
-              fontSize: '0.58rem',
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontSize: '0.55rem',
               fontWeight: 800,
-              letterSpacing: '0.12em',
+              letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: '#0a0a0a',
-              background: '#ffffff',
-              border: '1px solid var(--border-color)',
+              color: '#000000',
+              background: 'rgba(0, 0, 0, 0.05)',
+              border: '1px solid rgba(0, 0, 0, 0.1)',
               padding: '0.15rem 0.45rem',
               borderRadius: 'var(--radius-pill)',
-              boxShadow: 'var(--shadow-subtle)',
               lineHeight: 1,
+              marginLeft: '0.35rem',
+              alignSelf: 'center',
             }}
           >
             STUDIO
