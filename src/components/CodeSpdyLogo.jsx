@@ -22,8 +22,8 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true, theme
           height: `${iconSize}px`,
           borderRadius: '10px',
           background: '#0a0a0a',
-          border: '1.5px solid rgba(2, 132, 199, 0.4)',
-          boxShadow: '0 4px 12px -2px rgba(2, 132, 199, 0.3)',
+          border: '1.5px solid #262626',
+          boxShadow: '0 3px 10px rgba(0, 0, 0, 0.12)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -42,7 +42,7 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true, theme
           {/* Left Bracket */}
           <path
             d="M8 7L3.5 12L8 17"
-            stroke="#00F2FE"
+            stroke="#ffffff"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -50,15 +50,15 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true, theme
           {/* Right Bracket */}
           <path
             d="M16 7L20.5 12L16 17"
-            stroke="#0284C7"
+            stroke="#ffffff"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           {/* Center Speed Slash */}
           <path
-            d="M13 5L11 19"
-            stroke="#ffffff"
+            d="M13.5 5L10.5 19"
+            stroke="rgba(255, 255, 255, 0.45)"
             strokeWidth="2.2"
             strokeLinecap="round"
           />
@@ -72,18 +72,18 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true, theme
             fontFamily: "'Syne', 'Outfit', sans-serif",
             fontSize: isSmall ? '1.3rem' : '1.5rem',
             fontWeight: 800,
-            letterSpacing: '-0.025em',
+            letterSpacing: '-0.03em',
             lineHeight: 1,
-            color: theme === 'dark' ? '#ffffff' : '#0a0a0a',
+            color: '#0a0a0a',
             textTransform: 'none',
           }}
         >
           code
           <span
             style={{
-              color: '#0284C7',
+              color: '#0a0a0a',
               fontWeight: 900,
-              letterSpacing: '-0.01em',
+              letterSpacing: '-0.015em',
             }}
           >
             SPDY
@@ -98,11 +98,12 @@ export default function CodeSpdyLogo({ size = 'default', showBadge = true, theme
               fontWeight: 800,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: '#0284C7',
-              background: 'rgba(2, 132, 199, 0.08)',
-              border: '1px solid rgba(2, 132, 199, 0.25)',
+              color: '#0a0a0a',
+              background: '#ffffff',
+              border: '1px solid var(--border-color)',
               padding: '0.15rem 0.45rem',
               borderRadius: 'var(--radius-pill)',
+              boxShadow: 'var(--shadow-subtle)',
               lineHeight: 1,
             }}
           >

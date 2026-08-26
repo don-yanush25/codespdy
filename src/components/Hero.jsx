@@ -31,29 +31,19 @@ export default function Hero({ onGetStarted, onViewWork }) {
             CODESPDY STUDIO — WEB ENGINEERING
           </div>
 
-          {/* Large Editorial Display Headline with Gradient Accent */}
+          {/* Large Editorial Display Headline */}
           <h1
             className="animate-fade-in stagger-2"
             style={{
               fontSize: 'clamp(2.5rem, 5.2vw, 4.5rem)',
               fontWeight: 900,
-              lineHeight: 1.02,
+              lineHeight: 1.04,
               letterSpacing: '-0.04em',
               marginBottom: '1.25rem',
-              color: 'var(--text-main)',
+              color: '#0a0a0a',
             }}
           >
-            <span
-              style={{
-                background: 'linear-gradient(135deg, #0284c7 0%, #00f2fe 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                display: 'inline-block',
-              }}
-            >
-              Websites
-            </span>{' '}
-            Built for Businesses That Want to Grow.
+            Websites Built for Businesses That Want to Grow.
           </h1>
 
           {/* 3. Narrow Editorial Paragraph */}
@@ -67,7 +57,7 @@ export default function Hero({ onGetStarted, onViewWork }) {
               marginBottom: '2rem',
             }}
           >
-            codeSPDY engineers ultra-fast, bespoke websites designed from scratch to build immediate authority, attract high-value customers, and convert visitors into loyal clients.
+            codeSPDY creates fast, modern, mobile-friendly websites designed to help businesses build trust, reach customers, and turn visitors into loyal clients.
           </p>
 
           {/* 4. Refined CTA Group */}
@@ -103,13 +93,13 @@ export default function Hero({ onGetStarted, onViewWork }) {
             }}
           >
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'var(--text-main)', background: '#ffffff', padding: '0.4rem 0.85rem', borderRadius: 'var(--radius-pill)', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-subtle)' }}>
-              <Smartphone size={15} color="#0284c7" /> <span>100% Handcrafted Mobile UI</span>
+              <Smartphone size={15} color="var(--text-main)" /> <span>100% Mobile Optimized</span>
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'var(--text-main)', background: '#ffffff', padding: '0.4rem 0.85rem', borderRadius: 'var(--radius-pill)', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-subtle)' }}>
-              <Gauge size={15} color="#0284c7" /> <span>Sub-0.5s Target Page Speed</span>
+              <Gauge size={15} color="var(--text-main)" /> <span>Performance Optimized</span>
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'var(--text-main)', background: '#ffffff', padding: '0.4rem 0.85rem', borderRadius: 'var(--radius-pill)', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-subtle)' }}>
-              <ShieldCheck size={15} color="#0284c7" /> <span>Zero Bloated Page Builders</span>
+              <ShieldCheck size={15} color="var(--text-main)" /> <span>Custom Code Guarantee</span>
             </div>
           </div>
         </div>
