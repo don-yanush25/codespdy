@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUp, Mail, ArrowRight, X } from 'lucide-react';
+import CodeSpdyLogo from './CodeSpdyLogo';
 
 const InstagramIcon = ({ size = 16, color = 'currentColor' }) => (
   <svg
@@ -50,54 +51,8 @@ export default function Footer() {
         >
           {/* Brand Col */}
           <div style={{ maxWidth: '340px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.85rem' }}>
-              <div
-                style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '10px',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  border: '1.5px solid var(--border-color)',
-                  background: '#ffffff',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-                  flexShrink: 0,
-                }}
-              >
-                <img src="/assets/codespdy_logo.jpeg" alt="codeSPDY Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                <span
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1.35rem',
-                    fontWeight: 900,
-                    color: 'var(--text-main)',
-                    letterSpacing: '-0.035em',
-                    lineHeight: 1,
-                  }}
-                >
-                  code<span style={{ color: '#0284c7' }}>SPDY</span>
-                </span>
-                <span
-                  style={{
-                    fontSize: '0.6rem',
-                    fontWeight: 800,
-                    letterSpacing: '0.08em',
-                    background: 'rgba(0,0,0,0.05)',
-                    color: 'var(--text-muted)',
-                    border: '1px solid var(--border-color)',
-                    padding: '0.15rem 0.45rem',
-                    borderRadius: 'var(--radius-pill)',
-                    textTransform: 'uppercase',
-                    lineHeight: 1,
-                  }}
-                >
-                  STUDIO
-                </span>
-              </div>
+            <div style={{ marginBottom: '0.85rem' }}>
+              <CodeSpdyLogo size="default" showBadge={true} />
             </div>
 
             <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.55, marginBottom: '1.25rem' }}>
