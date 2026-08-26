@@ -219,7 +219,16 @@ export default function Services({ onSelectService }) {
         }
         @media (max-width: 850px) {
           .editorial-service-row {
-            gridTemplateColumns: 50px 1fr !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.85rem !important;
+            padding: 1.5rem 1rem !important;
+          }
+          .editorial-service-row > div:last-child {
+            width: 100% !important;
+            text-align: left !important;
+            margin-top: 0.5rem !important;
           }
         }
       `}</style>

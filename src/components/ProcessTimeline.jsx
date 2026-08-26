@@ -146,6 +146,7 @@ export default function ProcessTimeline({ onGetStarted }) {
             return (
               <div
                 key={step.num}
+                className="process-grid-card"
                 onMouseEnter={() => setHoveredIndex(index)}
                 style={{
                   padding: '2rem 1.75rem',
@@ -368,6 +369,17 @@ export default function ProcessTimeline({ onGetStarted }) {
         </div>
 
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .process-grid-card {
+            border-right: none !important;
+            border-bottom: 1px solid var(--border-color) !important;
+          }
+          .process-grid-card:last-child {
+            border-bottom: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

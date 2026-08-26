@@ -81,27 +81,25 @@ export default function Hero({ onGetStarted, onViewWork }) {
 
           {/* 5. Quiet Editorial Trust Metadata (Below CTA, Above Existing Hero Image) */}
           <div
-            className="animate-fade-in stagger-5"
+            className="animate-fade-in stagger-5 hero-trust-badges"
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '1.5rem',
+              gap: '1rem',
               flexWrap: 'wrap',
-              paddingTop: '1rem',
+              paddingTop: '0.5rem',
               fontSize: '0.84rem',
               color: 'var(--text-muted)',
               fontWeight: 600,
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-main)' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'var(--text-main)', background: 'var(--bg-subtle)', padding: '0.35rem 0.75rem', borderRadius: 'var(--radius-pill)', border: '1px solid var(--border-color)' }}>
               <Smartphone size={15} color="var(--text-main)" /> <span>100% Mobile Optimized</span>
             </div>
-            <span style={{ color: 'var(--border-color)' }}>—</span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-main)' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'var(--text-main)', background: 'var(--bg-subtle)', padding: '0.35rem 0.75rem', borderRadius: 'var(--radius-pill)', border: '1px solid var(--border-color)' }}>
               <Gauge size={15} color="var(--text-main)" /> <span>Performance Optimized</span>
             </div>
-            <span style={{ color: 'var(--border-color)' }}>—</span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-main)' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'var(--text-main)', background: 'var(--bg-subtle)', padding: '0.35rem 0.75rem', borderRadius: 'var(--radius-pill)', border: '1px solid var(--border-color)' }}>
               <ShieldCheck size={15} color="var(--text-main)" /> <span>Custom Code Guarantee</span>
             </div>
           </div>
