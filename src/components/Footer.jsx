@@ -114,18 +114,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 style={{ fontSize: '0.98rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--text-main)' }}>Quick Links</h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.88rem', color: 'var(--text-muted)' }}>
-              <li><a href="#home" style={{ color: 'inherit', textDecoration: 'none' }}>Home</a></li>
-              <li><a href="#services" style={{ color: 'inherit', textDecoration: 'none' }}>Services</a></li>
-              <li><a href="#portfolio" style={{ color: 'inherit', textDecoration: 'none' }}>Our Portfolio</a></li>
-              <li><a href="#pricing" style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a></li>
-              <li><a href="#process" style={{ color: 'inherit', textDecoration: 'none' }}>Our Process</a></li>
-              <li><a href="#faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a></li>
-            </ul>
-          </div>
 
           {/* Utility Pages */}
           <div>
