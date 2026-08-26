@@ -23,6 +23,16 @@ const InstagramIcon = ({ size = 16, color = 'currentColor' }) => (
 export default function Footer() {
   const [activeLegalModal, setActiveLegalModal] = useState(null);
 
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && activeLegalModal) {
+        setActiveLegalModal(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeLegalModal]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -192,11 +202,14 @@ export default function Footer() {
       {/* Legal Modals */}
       {activeLegalModal && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeLegalModal === 'privacy' ? 'Privacy Policy' : 'Terms of Service'}
           style={{
             position: 'fixed',
             inset: 0,
             zIndex: 1000,
-            background: 'rgba(17, 17, 17, 0.45)',
+            background: 'rgba(23, 25, 29, 0.5)',
             backdropFilter: 'blur(8px)',
             display: 'flex',
             alignItems: 'center',

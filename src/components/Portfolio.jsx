@@ -136,6 +136,7 @@ export default function Portfolio({ onOrderProject }) {
                     transition: 'transform 0.5s var(--ease-premium)',
                   }}
                   loading="lazy"
+                  decoding="async"
                   onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
                   onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                 />

@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Monitor, Tablet, Smartphone, ArrowRight } from 'lucide-react';
 
 export default function DemoModal({ project, onClose, onOrderSimilar }) {
   const [deviceView, setDeviceView] = useState('desktop');
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && onClose) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
 
   if (!project) return null;
 
@@ -20,6 +30,9 @@ export default function DemoModal({ project, onClose, onOrderSimilar }) {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${project.title} live interactive preview`}
       style={{
         position: 'fixed',
         inset: 0,
