@@ -345,13 +345,14 @@ export default function BusinessTypes({ onSelectIndustry }) {
                     style={{
                       fontSize: '0.72rem',
                       fontWeight: 700,
-                      padding: '0.3rem 0.8rem',
-                      borderRadius: 'var(--radius-pill)',
+                      padding: '0.35rem 0.75rem',
+                      borderRadius: '8px',
                       background: `${current.accent}12`,
                       border: `1px solid ${current.accent}30`,
                       color: current.accent,
                       animation: 'fadeIn 0.5s ease 0.1s forwards',
                       opacity: 0,
+                      lineHeight: 1.4,
                     }}
                   >
                     <Zap size={11} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} />
@@ -419,7 +420,7 @@ export default function BusinessTypes({ onSelectIndustry }) {
               <a
                 href="#contact"
                 onClick={() => onSelectIndustry(current.name)}
-                className="btn btn-primary btn-lg"
+                className="btn btn-primary"
                 style={{
                   width: '100%',
                   justifyContent: 'center',
@@ -427,9 +428,15 @@ export default function BusinessTypes({ onSelectIndustry }) {
                   border: `1px solid ${current.accent}`,
                   animation: 'fadeIn 0.5s ease 0.3s forwards',
                   opacity: 0,
+                  whiteSpace: 'normal',
+                  textAlign: 'center',
+                  padding: '0.85rem 1.25rem',
+                  fontSize: '0.92rem',
+                  lineHeight: 1.35,
+                  minHeight: '48px',
                 }}
               >
-                Build Website for {current.name} <ArrowRight size={16} className="btn-arrow" />
+                Build Website for {current.name} <ArrowRight size={16} className="btn-arrow" style={{ flexShrink: 0 }} />
               </a>
             </div>
           </div>
